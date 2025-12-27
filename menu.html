@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+
+<style>
+    body {
+        background: #111;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    /* 🔥 NEW TRANSPARENT GLASS NAV BAR */
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        /* Glass Effect */
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        z-index: 20;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+        transition: 0.3s ease;
+    }
+
+    /* Underline animation */
+    .nav a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        background: gold;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .nav a:hover::after {
+        width: 100%;
+    }
+
+    /* Glow hover effect */
+    .nav a:hover {
+        color: #ffdd66;
+        text-shadow: 0 0 10px gold;
+        transform: scale(1.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 120px;
+        font-size: 45px;
+        color: orange;
+        text-shadow: 0 0 20px orange;
+    }
+
+    /* Table */
+    table {
+        width: 85%;
+        margin: auto;
+        background: white;
+        color: black;
+        border-collapse: collapse;
+        font-size: 20px;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 25px black;
+    }
+
+    th {
+        background: #222;
+        color: white;
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    td {
+        padding: 12px;
+    }
+
+    /* Buttons */
+    button {
+        background: #f5c518;
+        padding: 7px 13px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ffcc33;
+        transform: scale(1.1);
+    }
+
+    button a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Images */
+    .menu-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 2px solid black;
+    }
+
+    td a {
+        text-decoration: none;
+        font-weight: bold;
+        color: darkblue;
+    }
+
+    td a:hover {
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 Transparent Navigation Bar -->
+<div class="nav">
+    <a href="./Index.html">Home</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./menu.html">Menu</a>
+    <a href="./contact.html">Contact Us</a>
+</div>
+
+<h1>COFTEASHOP MENU</h1>
+
+<!-- Menu Table -->
+<table border="1">
+    <tr>
+        <th>S.No</th>
+        <th>Chai</th>
+        <th>Image</th>
+        <th>Process</th>
+        <th>Price</th>
+        <th>Coffee</th>
+        <th>Image</th>
+        <th>Process</th>
+        <th>Price</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td><a href="./normal.html">Normal Chai</a></td>
+        <td><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>9</td>
+
+        <td><a href="./coffee.html">Filter Coffee</a></td>
+        <td><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td><a href="./splchai.html">Spl Chai</a></td>
+        <td><img src="./10.webp" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>9</td>
+
+        <td><a href="./blackcoffee.html"></a>Black Coffee</td>
+        <td><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>10</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Ginger Chai</td>
+        <td><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>9</td>
+
+        <td>Cold Coffee</td>
+        <td><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>25</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Lemon Chai</td>
+        <td><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>9</td>
+
+        <td>Strong Coffee</td>
+        <td><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=60&q=80" class="menu-img"></td>
+        <td><button><a href="https://www.youtube.com/watch?v=5IwmuaKE7tA" target="_blank">Click</a></button></td>
+        <td>12</td>
+    </tr>
+</table>
+
+</body>
+</html>

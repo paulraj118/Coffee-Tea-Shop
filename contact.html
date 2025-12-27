@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchase - CofteaShop</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to bottom, #1f1c2c, #928dab);
+        color: white;
+    }
+
+    /* 🔥 TRANSPARENT GLASS NAV BAR */
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        /* Glass effect */
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        z-index: 20;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+        transition: 0.3s ease;
+    }
+
+    /* Gold underline animation */
+    .nav a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        background: gold;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .nav a:hover::after {
+        width: 100%;
+    }
+
+    .nav a:hover {
+        color: #ffdd66;
+        text-shadow: 0 0 10px gold;
+        transform: scale(1.1);
+    }
+
+    /* Form Container */
+    .form-container {
+        background: rgba(255, 255, 255, 0.95);
+        color: black;
+        width: 400px;
+        max-width: 90%;
+        margin: 140px auto;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .form-container:hover {
+        transform: translateY(-5px);
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        font-size: 32px;
+        color: #ff6600;
+        text-shadow: 0 0 10px #ff6600;
+    }
+
+    label {
+        font-size: 18px;
+        display: block;
+        text-align: left;
+        margin: 10px 0 5px;
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="number"]:focus, 
+    input[type="email"]:focus, select:focus {
+        border-color: #ff6600;
+        box-shadow: 0 0 8px #ff6600;
+    }
+
+    .payment-method {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .payment-method input {
+        margin-right: 8px;
+        transform: scale(1.2);
+        margin-left: 10px;
+    }
+
+    /* Buttons */
+    .btn-submit, .btn-reset {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin: 10px 5px;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-submit {
+        background: linear-gradient(to right, #28a745, #85e085);
+        color: white;
+    }
+
+    .btn-submit:hover {
+        background: linear-gradient(to right, #218838, #6bc36b);
+        transform: scale(1.05);
+    }
+
+    .btn-reset {
+        background: linear-gradient(to right, #dc3545, #f08080);
+        color: white;
+    }
+
+    .btn-reset:hover {
+        background: linear-gradient(to right, #c82333, #e57373);
+        transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+        .form-container {
+            padding: 30px 20px;
+        }
+
+        .nav {
+            gap: 15px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 GLASS NAVIGATION BAR -->
+<div class="nav">
+    <a href="./Index.html">Home</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./menu.html">Menu</a>
+    <a href="./contact.html">Contact Us</a>
+</div>
+
+<!-- Form -->
+<div class="form-container">
+    <h1>PURCHASE</h1>
+    <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Mobile No:</label>
+        <input type="number" placeholder="Enter mobile number" required>
+
+        <label>Email ID:</label>
+        <input type="email" placeholder="Enter email" required>
+
+        <label>Chai:</label>
+        <select required>
+            <option value="">-Select-</option>
+            <option>Normal</option>
+            <option>Spl</option>
+            <option>Lemon</option>
+            <option>Ginger</option>
+        </select>
+
+        <label>Coffee:</label>
+        <select required>
+            <option value="">-Select-</option>
+            <option>Filter</option>
+            <option>Black</option>
+            <option>Cold</option>
+            <option>Strong</option>
+        </select>
+
+        <div class="payment-method">
+            <label>Payment Method:</label> <br>
+            <input type="radio" name="payment"> GooglePay
+            <input type="radio" name="payment"> PhonePay <br>
+            <input type="radio" name="payment"> UPI
+            <input type="radio" name="payment"> Cash on Delivery
+        </div>
+
+        <a href="./sucessfull.html" class="btn-submit">Submit</a>
+        <input type="reset" value="Reset" class="btn-reset">
+    </form>
+</div>
+
+</body>
+</html>
